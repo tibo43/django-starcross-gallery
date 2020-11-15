@@ -5,13 +5,13 @@ IMAGEKIT_DEFAULT_CACHEFILE_STRATEGY = 'imagekit.cachefiles.strategies.Optimistic
 
 
 # Location of logo in static
-GALLERY_LOGO_PATH = getattr(settings, 'GALLERY_LOGO_PATH', "gallery/images/starcross.png")
+GALLERY_LOGO_PATH = getattr(settings, 'GALLERY_LOGO_PATH', "gallery/images/bref-tibo.png")
 # Gallery title in top bar
 GALLERY_TITLE = getattr(settings, 'GALLERY_TITLE', "Gallery")
 # Info text in footer
-GALLERY_FOOTER_INFO = getattr(settings, 'GALLERY_FOOTER_INFO', "Starcross Gallery")
+GALLERY_FOOTER_INFO = getattr(settings, 'GALLERY_FOOTER_INFO', "Bref-Tibo Contact")
 # Gallery footer email
-GALLERY_FOOTER_EMAIL = getattr(settings, 'GALLERY_FOOTER_EMAIL', "gallery@starcross.dev")
+GALLERY_FOOTER_EMAIL = getattr(settings, 'GALLERY_FOOTER_EMAIL', "contact@bref-tibo.tf")
 # Target height for thumbnail display
 GALLERY_THUMBNAIL_SIZE = getattr(settings, 'GALLERY_THUMBNAIL_SIZE', 250)
 # Large preview in modal popup, enough to fill a typical browser window
