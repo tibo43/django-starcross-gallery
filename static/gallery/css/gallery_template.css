@@ -18,14 +18,9 @@ body {
 }
 
 #logo {
-    width: 12em;
+    height: 2.5em;
     float: left;
     padding-right: 1em;
-}
-
-#title {
-    padding: 0.9em 0 1em 1em;
-    white-space: nowrap;
 }
 
 #detail {

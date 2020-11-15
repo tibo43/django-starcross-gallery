@@ -29,16 +29,13 @@
 
     {% if logo_path %}
         <div id="logo">
-            <a href="/gallery"><img src="{% static logo_path %}" style="height: auto; max-width:100%;"></a>
+            <a href="/gallery"><img src="{% static logo_path %}" style="max-height: 100%; max-width:100%;"></a>
         </div>
     {%  endif %}
     <div id="detail">
         {% block bar_detail %}
         {%  endblock %}
     </div>
-    {% block bar_title %}
-    <div id="title">{{ gallery_title }}</div>
-    {% endblock %}
 
 </div> <!-- top_bar -->
 
@@ -52,8 +49,7 @@
 
 <div id="footer">
 
-    <span>{{ footer_info }}</span><br>
-    <span><a href="mailto:{{ footer_email }}">{{ footer_email }}</a></span>
+    <span><a href="mailto:{{ footer_email }}">{{ footer_info }}</a></span><br>
 
 </div> <!--footer-->
 
