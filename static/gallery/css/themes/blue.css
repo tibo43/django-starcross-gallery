@@ -1,10 +1,10 @@
 body {
-    background-color: #00008b;
+    background-color: #073153;
     color: #eee;
 }
 
 #top_bar {
-    background-color: #000080;
+    background-color: #073357;
 }
 
 #title, #title a {
@@ -17,7 +17,7 @@ body {
 }
 
 #footer {
-    background-color: #000080;
+    background-color: #073357;
     color: #ddd;
 }
 
@@ -30,10 +30,10 @@ a {
 }
 
 .empty {
-    border-color: #000099;
+    border-color: #0a508a;
 }
 
 #empty_placeholder {
-    background: #000099;
+    background: #0a508a;
     border-color: #666;
 }
