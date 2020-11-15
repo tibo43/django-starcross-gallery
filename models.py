@@ -3,7 +3,7 @@ from django.utils.text import slugify
 from django.urls import reverse
 from django.utils.functional import cached_property
 from imagekit.models import ImageSpecField
-from imagekit.processors import ResizeToFit
+from imagekit.processors import ResizeToFit, Transpose
 from PIL import Image as pImage
 from PIL.ExifTags import TAGS
 from gallery import settings
@@ -13,16 +13,16 @@ import os
 
 
 class Image(models.Model):
-
     data = models.ImageField(upload_to='images')
     data_thumbnail = ImageSpecField(source='data',
-                                    processors=[ResizeToFit(
-                                        height=settings.GALLERY_THUMBNAIL_SIZE * settings.GALLERY_HDPI_FACTOR)],
+                                    processors=[Transpose(),
+                                        ResizeToFit(height=settings.GALLERY_THUMBNAIL_SIZE * settings.GALLERY_HDPI_FACTOR)],
                                     format='JPEG',
                                     options={'quality': settings.GALLERY_RESIZE_QUALITY})
     data_preview = ImageSpecField(source='data',
-                                  processors=[ResizeToFit(width=settings.GALLERY_PREVIEW_SIZE * settings.GALLERY_HDPI_FACTOR,
-                                                          height=settings.GALLERY_PREVIEW_SIZE * settings.GALLERY_HDPI_FACTOR)],
+                                  processors=[Transpose(),
+                                        ResizeToFit(width=settings.GALLERY_PREVIEW_SIZE * settings.GALLERY_HDPI_FACTOR,
+                                                height=settings.GALLERY_PREVIEW_SIZE * settings.GALLERY_HDPI_FACTOR)],
                                   format='JPEG',
                                   options={'quality': settings.GALLERY_RESIZE_QUALITY})
     date_uploaded = models.DateTimeField(auto_now_add=True)
